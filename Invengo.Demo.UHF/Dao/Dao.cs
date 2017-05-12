@@ -16,7 +16,7 @@ namespace Invengo.Sample.Dao
         {
             Conexion conexion = new Conexion();
             con = conexion.conectar();
-            //asd
+           
         }
 
         
