@@ -144,12 +144,13 @@ namespace Invengo.Sample
                 
                  this.res = dao.getPersonaByCredencial(msg,this.comedor);
                  ListViewItem lvi = new ListViewItem(new string[] { msg,this.res, "1" });
+                 lvCodes.Items.Add(lvi);
+                 lvCodes.EnsureVisible(lvCodes.Items.Count - 1);
+                 scanner.StopScan();
                 Thread ATM2 = new Thread(new ThreadStart(ThreadProc));
                 ATM2.Start();
                 
-                lvCodes.Items.Add(lvi);
-                lvCodes.EnsureVisible(lvCodes.Items.Count - 1);
-                scanner.StopScan();
+               
                 btscan.Text = "Scan";
                 btscan.Tag = "start";
                 
