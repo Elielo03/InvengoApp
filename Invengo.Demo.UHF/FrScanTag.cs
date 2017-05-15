@@ -304,11 +304,7 @@ namespace Invengo.Sample
                     string[] arrayResultado = null;
                     string nombre = null;
                     Dao.Dao dao = new Dao.Dao();
-                    ListViewItem lvi = new ListViewItem(new string[] { "1", msg.ID, " ", msg.Epc, msg.Userdata, msg.RSSI.ToString() });
-                    //strmsg = msg.Userdata
-                    lvCodes.Items.Add(lvi);
-                    lvCodes.EnsureVisible(lvCodes.Items.Count - 1);
-                    readSnd.Set();
+                   
 
                     arrayCodigo = msg.Epc.Split(' ');
                     codigo = arrayCodigo[2] + arrayCodigo[3][0] + arrayCodigo[3][1];
@@ -316,6 +312,11 @@ namespace Invengo.Sample
                     string res = dao.getPersonaByUHF(lectura.ToString());
                     arrayResultado = res.Split(',');
                     nombre = arrayResultado[1];
+                    ListViewItem lvi = new ListViewItem(new string[] { "1", msg.ID, nombre, msg.Epc, msg.Userdata, msg.RSSI.ToString() });
+                    //strmsg = msg.Userdata
+                    lvCodes.Items.Add(lvi);
+                    lvCodes.EnsureVisible(lvCodes.Items.Count - 1);
+                    readSnd.Set();
                     //lvCodes.Items.Add(nombre, 2);
                     //lvCodes.Items.Clear();
                     // lvi = new ListViewItem(new string[] { "1", msg.ID, nombre, msg.Epc, msg.Userdata, msg.RSSI.ToString() });
