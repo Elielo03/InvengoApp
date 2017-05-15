@@ -309,7 +309,7 @@ namespace Invengo.Sample
                     lvCodes.EnsureVisible(lvCodes.Items.Count - 1);
                     readSnd.Set();
 
-                    arrayCodigo = lvi.SubItems[3].Text.Split(' ');
+                    arrayCodigo = msg.Epc.Split(' ');
                     codigo = arrayCodigo[2] + arrayCodigo[3][0] + arrayCodigo[3][1];
                     int lectura = (int)Int64.Parse(codigo, System.Globalization.NumberStyles.HexNumber);
                     
@@ -317,12 +317,13 @@ namespace Invengo.Sample
                     string res = dao.getPersonaByUHFComedor(lectura.ToString());
                     arrayResultado = res.Split(',');
                     nombre=arrayResultado[1];
-                    lvCodes.Items.Clear();
-                     lvi = new ListViewItem(new string[] { "1", msg.ID,nombre, msg.Epc, msg.Userdata, msg.RSSI.ToString() });
+
+                    //lvCodes.Items.Add(nombre, 2);
+                     //lvi = new ListViewItem(new string[] { "1", msg.ID,nombre, msg.Epc, msg.Userdata, msg.RSSI.ToString() });
                    
-                    lvCodes.Items.Add(lvi);
-                    lvCodes.EnsureVisible(lvCodes.Items.Count - 1);
-                    readSnd.Set();
+                    //lvCodes.Items.Add(lvi);
+                    //lvCodes.EnsureVisible(lvCodes.Items.Count - 1);
+                    //readSnd.Set();
                     stopSearching();
                   
 
