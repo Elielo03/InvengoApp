@@ -310,7 +310,7 @@ namespace Invengo.Sample
                     lvCodes.EnsureVisible(lvCodes.Items.Count - 1);
                     readSnd.Set();
 
-                    arrayCodigo = lvi.SubItems[2].Text.Split(' ');
+                    arrayCodigo = lvi.SubItems[3].Text.Split(' ');
                     codigo = arrayCodigo[2] + arrayCodigo[3][0] + arrayCodigo[3][1];
                     int lectura = (int)Int64.Parse(codigo, System.Globalization.NumberStyles.HexNumber);
                     string res = dao.getPersonaByUHF(lectura.ToString());
