@@ -37,6 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btscan = new System.Windows.Forms.Button();
             this.trigPull = new System.Windows.Forms.Button();
+            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // btclear
@@ -54,6 +55,7 @@
             // lvCodes
             // 
             this.lvCodes.Columns.Add(this.chCode);
+            this.lvCodes.Columns.Add(this.columnHeader1);
             this.lvCodes.Columns.Add(this.chCount);
             this.lvCodes.FullRowSelect = true;
             this.lvCodes.Location = new System.Drawing.Point(-2, 3);
@@ -61,6 +63,7 @@
             this.lvCodes.Size = new System.Drawing.Size(240, 217);
             this.lvCodes.TabIndex = 61;
             this.lvCodes.View = System.Windows.Forms.View.Details;
+            this.lvCodes.SelectedIndexChanged += new System.EventHandler(this.lvCodes_SelectedIndexChanged);
             // 
             // chCode
             // 
@@ -117,6 +120,11 @@
             this.trigPull.Text = "Single read";
             this.trigPull.Click += new System.EventHandler(this.trigPull_Click);
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Name";
+            this.columnHeader1.Width = 60;
+            // 
             // FrMotoBarCode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -154,5 +162,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btscan;
         public System.Windows.Forms.Button trigPull;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }

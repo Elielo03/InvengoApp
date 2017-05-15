@@ -141,8 +141,9 @@ namespace Invengo.Sample
 
 
                 this.res = "";
-                ListViewItem lvi = new ListViewItem(new string[] { msg, "1" });
+                
                  this.res = dao.getPersonaByCredencial(msg,this.comedor);
+                 ListViewItem lvi = new ListViewItem(new string[] { msg,this.res, "1" });
                 Thread ATM2 = new Thread(new ThreadStart(ThreadProc));
                 ATM2.Start();
                 
@@ -251,6 +252,11 @@ namespace Invengo.Sample
 
             }
             catch { }
+
+        }
+
+        private void lvCodes_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
 
