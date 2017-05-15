@@ -284,3 +284,31 @@ C:\Users\Eliel\Desktop\Invengo.Demo.UHF - copia\obj\Debug\Invengo.Sample.FrSound
 C:\Users\Eliel\Desktop\Invengo.Demo.UHF - copia\obj\Debug\Invengo.Sample.csproj.GenerateResource.Cache
 C:\Users\Eliel\Desktop\Invengo.Demo.UHF - copia\obj\Debug\Invengo.Sample.exe
 C:\Users\Eliel\Desktop\Invengo.Demo.UHF - copia\obj\Debug\Invengo.Sample.pdb
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\bin\Debug\SQLite.Interop.066.DLL
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\bin\Debug\SQLite.Interop.066.exp
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\bin\Debug\SQLite.Interop.066.lib
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\bin\Debug\Invengo.Sample.exe
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\bin\Debug\Invengo.Sample.pdb
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\obj\Debug\Invengo.Sample.FrBarcode.resources
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\obj\Debug\Invengo.Sample.FrAntennaPower.resources
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\obj\Debug\Invengo.Sample.FrBattery.resources
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\obj\Debug\Invengo.Sample.FrConexion.resources
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\obj\Debug\Invengo.Sample.FrInfo.resources
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\obj\Debug\Invengo.Sample.FrLengthParas.resources
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\obj\Debug\Invengo.Sample.FrMenu.resources
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\obj\Debug\Invengo.Sample.FrMotoBarCode.resources
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\obj\Debug\Invengo.Sample.FrPadMain.resources
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\obj\Debug\Invengo.Sample.FrReadSettings.resources
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\obj\Debug\Invengo.Sample.FrScanTag.resources
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\obj\Debug\Invengo.Sample.FrScanTagComedor.resources
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\obj\Debug\Invengo.Sample.FrSysInfo.resources
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\obj\Debug\Invengo.Sample.FrTagMain.resources
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\obj\Debug\Invengo.Sample.FrTestKey.resources
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\obj\Debug\Invengo.Sample.FrScreen.resources
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\obj\Debug\Invengo.Sample.FrWriteTag.resources
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\obj\Debug\Invengo.Sample.Properties.Resources.resources
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\obj\Debug\Invengo.Sample.FrSound.resources
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\obj\Debug\Invengo.Sample.csproj.GenerateResource.Cache
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\obj\Debug\Invengo.Sample.exe
+C:\Users\Eliel\Documents\GitHub\InvengoApp\Invengo.Demo.UHF\obj\Debug\Invengo.Sample.pdb

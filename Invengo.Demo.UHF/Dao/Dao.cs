@@ -60,7 +60,7 @@ namespace Invengo.Sample.Dao
 
         public Boolean addMarcajeComedor(int idPersona, int idEmpresa, string Empresa, string numNomina, string credencial, int esFamiliar)
         {
-            //Console.WriteLine("el id es: "+idPersona);
+            
             Boolean respuesta = false;
             string sql = "INSERT INTO marcajeComedor(marcaje,idPersona,idEmpresa,numNomina,credencial,esFamiliar,Empresa) values((datetime('now','localtime'))," + idPersona + "," + idEmpresa + ",'" + numNomina + "','" + credencial + "'," + esFamiliar + ",'" + Empresa + "')";
             string conString = @"Data Source=\datoInvengo.s3db";
@@ -238,7 +238,7 @@ namespace Invengo.Sample.Dao
             SQLiteConnection con = new SQLiteConnection(conString);
             //variables en caso de que si exista la persona;
             Boolean insertar = false;
-            //int id=0;
+         
             SQLiteCommand cmd = new SQLiteCommand(query, con);
             con.Open();
             try
@@ -248,7 +248,7 @@ namespace Invengo.Sample.Dao
                     if (!rdr.HasRows)
                     {
                         respuesta="0";
-                        //Console.WriteLine("1");
+                       
                     }
                     else
                     {
@@ -306,7 +306,7 @@ namespace Invengo.Sample.Dao
             SQLiteConnection con = new SQLiteConnection(conString);
             //variables en caso de que si exista la persona;
             Boolean insertar = false;
-            //int id=0;
+            
             SQLiteCommand cmd = new SQLiteCommand(query, con);
             con.Open();
             try
@@ -316,7 +316,7 @@ namespace Invengo.Sample.Dao
                 if (!rdr.HasRows)
                 {
                     respuesta = "0";
-                    //Console.WriteLine("1");
+                   
                 }
                 else
                 {
@@ -375,7 +375,7 @@ namespace Invengo.Sample.Dao
             SQLiteConnection con = new SQLiteConnection(conString);
             //variables en caso de que si exista la persona;
             Boolean insertar = false;
-            //int id=0;
+           
             SQLiteCommand cmd = new SQLiteCommand(query, con);
             con.Open();
             try
@@ -385,7 +385,7 @@ namespace Invengo.Sample.Dao
                 if (!rdr.HasRows)
                 {
                     respuesta = "0";
-                    //Console.WriteLine("1");
+                   
                 }
                 else
                 {
@@ -397,13 +397,9 @@ namespace Invengo.Sample.Dao
                         Empresa = rdr[6].ToString();
                         numNomina = rdr[3].ToString();
                         credencial = rdr[2].ToString();
-                        esFamiliar = int.Parse(rdr[7].ToString());
-                        
-                       
+                        esFamiliar = int.Parse(rdr[7].ToString());                       
                         respuesta = rdr[0] + "," + rdr[1].ToString() + "," + credencial + "," + Empresa;
-                       
                         insertar = true;
-
                     }
                 }
 
@@ -547,7 +543,7 @@ namespace Invengo.Sample.Dao
                             {
                                 Console.WriteLine("Marcaje no sincronizado (marcaje autobus)\nAsegurate de tener conexion a internet e intentalo mas tarde!");
                                 con.Close();
-                                break;
+                                //break;
                                 
                             }
                             else {
@@ -617,17 +613,15 @@ namespace Invengo.Sample.Dao
                             string credencial = rdr[4].ToString();
                             int esFamiliar = int.Parse(rdr[5].ToString());
                             string fecha = rdr[0].ToString();
-                           
                             string urldatos = "&marcaje=" + marcaje + "&idPersona=" + idPersona + "&idEmpresa=" + idEmpresa + "&numNomina=" + numNomina + "&credencial=" + credencial + "&esFamiliar=" + esFamiliar;
                             restClient.endPoint = "http://192.168.40.21/Invengo/Controller/ControllerInvengo.php?OPC=5" + urldatos;
-
                             string strResponse = string.Empty;
                             strResponse = restClient.makeRequest();
                             if (strResponse.Equals("0"))
                             {
                                 Console.WriteLine("Marcaje no sincronizado (marcaje comedor)\nAsegurate de tener conexion a internet e intentalo mas tarde!");
                                 con.Close();
-                                break;
+                                //break;
 
                             }
                             else {
