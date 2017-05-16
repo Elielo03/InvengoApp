@@ -318,13 +318,6 @@ namespace Invengo.Sample
                     lvCodes.Items.Add(lvi);
                     lvCodes.EnsureVisible(lvCodes.Items.Count - 1);
                     readSnd.Set();
-
-                    //lvCodes.Items.Add(nombre, 2);
-                     //lvi = new ListViewItem(new string[] { "1", msg.ID,nombre, msg.Epc, msg.Userdata, msg.RSSI.ToString() });
-                   
-                    //lvCodes.Items.Add(lvi);
-                    //lvCodes.EnsureVisible(lvCodes.Items.Count - 1);
-                    //readSnd.Set();
                     stopSearching();
                   
 
@@ -365,7 +358,8 @@ namespace Invengo.Sample
             {
                 rate = totalTimes / readSpan;
             }
-            string strtmp = "Rate:{0}/s  tags:{1}";
+            //string strtmp = "Rate:{0}/s  tags:{1}";
+            string strtmp = "Credenciales:{1}";
             ////string str = string.Format(strtmp, rate, totalTimes, totalTags);
             string str = string.Format(strtmp, rate, totalTags);
             lblStat.Text = str;

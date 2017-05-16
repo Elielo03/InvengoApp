@@ -32,6 +32,7 @@
             this.lvCodes = new System.Windows.Forms.ListView();
             this.chCount = new System.Windows.Forms.ColumnHeader();
             this.chtid = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.chepc = new System.Windows.Forms.ColumnHeader();
             this.chuserdata = new System.Windows.Forms.ColumnHeader();
             this.chrssi = new System.Windows.Forms.ColumnHeader();
@@ -48,7 +49,6 @@
             this.lblStat = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer();
             this.button1 = new System.Windows.Forms.Button();
-            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // ibScan
@@ -89,6 +89,11 @@
             // 
             this.chtid.Text = "TID/ID";
             this.chtid.Width = 200;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Name";
+            this.columnHeader1.Width = 60;
             // 
             // chepc
             // 
@@ -204,7 +209,6 @@
             this.lblStat.Location = new System.Drawing.Point(0, 246);
             this.lblStat.Name = "lblStat";
             this.lblStat.Size = new System.Drawing.Size(238, 20);
-            this.lblStat.Visible = false;
             // 
             // timer1
             // 
@@ -222,11 +226,6 @@
             this.button1.Tag = "Start";
             this.button1.Text = "Cod. Barra";
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Name";
-            this.columnHeader1.Width = 60;
             // 
             // FrScanTagComedor
             // 

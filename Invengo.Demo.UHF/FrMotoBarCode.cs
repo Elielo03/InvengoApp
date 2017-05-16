@@ -149,8 +149,6 @@ namespace Invengo.Sample
                  scanner.StopScan();
                 Thread ATM2 = new Thread(new ThreadStart(ThreadProc));
                 ATM2.Start();
-                
-               
                 btscan.Text = "Scan";
                 btscan.Tag = "start";
                 
