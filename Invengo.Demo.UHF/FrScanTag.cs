@@ -365,8 +365,8 @@ namespace Invengo.Sample
             {
                 rate = totalTimes / readSpan;
             }
-            //string strtmp = "Rate:{0}/s  tags:{1}";
-            string strtmp = "Credenciales:{1}";
+            string strtmp = "Rate:{0}/s  Credenciales:{1}";
+            //string strtmp = "Credenciales:{1}";
             ////string str = string.Format(strtmp, rate, totalTimes, totalTags);
             string str = string.Format(strtmp, rate, totalTags);
             lblStat.Text = str;
