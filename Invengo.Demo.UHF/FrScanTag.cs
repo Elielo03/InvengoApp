@@ -368,8 +368,8 @@ namespace Invengo.Sample
             string strtmp = "Rate:{0}/s  Credenciales:{1}";
             //string strtmp = "Credenciales:{1}";
             ////string str = string.Format(strtmp, rate, totalTimes, totalTags);
-            string str = string.Format(strtmp, rate, totalTags);
-            lblStat.Text = str;
+            //string str = string.Format(strtmp, rate, totalTags);
+            lblStat.Text = "Credenciales:" + lvCodes.Items.Count;
 
             //if (IsSound)
             //{
