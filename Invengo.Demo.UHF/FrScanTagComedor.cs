@@ -335,6 +335,7 @@ namespace Invengo.Sample
                
         }
             totalTags = lvCodes.Items.Count;//
+            lblStat.Text = "Credenciales:" + lvCodes.Items.Count;
            
         }
 
@@ -362,7 +363,7 @@ namespace Invengo.Sample
             //string strtmp = "Credenciales:{1}";
             ////string str = string.Format(strtmp, rate, totalTimes, totalTags);
             //string str = string.Format(strtmp, rate, totalTags);
-            lblStat.Text = "Credenciales:" + lvCodes.Items.Count;
+            //lblStat.Text = "Credenciales:" + lvCodes.Items.Count;
 
             //if (IsSound)
             //{
