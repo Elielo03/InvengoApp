@@ -452,6 +452,7 @@ namespace Invengo.Sample
 
         private void btRead_Click(object sender, EventArgs e)
         {
+            lblStat.Text = "";
             IsKeyUp = !IsKeyUp;
             ReadLoop();
         }
