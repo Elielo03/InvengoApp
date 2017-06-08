@@ -319,33 +319,38 @@ namespace Invengo.Sample
                              string res = dao.getPersonaByUHF(lectura.ToString());
                             arrayResultado = res.Split(',');
                             nombre = arrayResultado[1];
+                            ListViewItem item = listView1.FindItemWithText(msg.Epc);
                              lvi = new ListViewItem(new string[] { "1", msg.ID, nombre, msg.Epc, msg.Userdata, msg.RSSI.ToString() });
-                             lvCodes.Items.Add(lvi);
-                           lvCodes.EnsureVisible(lvCodes.Items.Count - 1);
-                           readSnd.Set();
-                           stopSearching();
+
+                             if (item == null)
+                             {
 
 
-                           FrInfo frInfo = new FrInfo(res);
-                           frInfo.ShowDialog();
+                                 // doesn't exist 
+                                 lvCodes.Items.Add(lvi);
+                                 lvCodes.EnsureVisible(lvCodes.Items.Count - 1);
+                                 readSnd.Set();
+                                 stopSearching();
 
-                           totalTags = 1;
-                           totalTimes = 1;
+
+                                 FrInfo frInfo = new FrInfo(res);
+                                 frInfo.ShowDialog();
+
+                                 totalTags = 1;
+                                 totalTimes = 1;
+
+                             }
+
+                            
                         
                         }catch(Exception ex){
                         MessageBox.Show("Lectura: " + msg.Epc + " sin registro");
                             stopSearching();
                         }
 
-                       
-                           
-                           
 
                             }
-                           
-                           
 
-                        
                       
                         stopSearching();
                 
