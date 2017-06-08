@@ -1,0 +1,4 @@
+﻿2014-02-18 15:46:35,000 [152896098] FATAL - ErrCode.xml:
+2014-02-18 15:46:35,000 [152896098] INFO - Send failed,send times 1,Invengo.NetAPI.Protocol.IRP1.SysQuery_800,0xFF
+2014-02-18 15:50:40,000 [109248774] FATAL - ErrCode.xml:
+2014-02-18 15:50:43,000 [109248774] INFO - Send failed,send times 1,Invengo.NetAPI.Protocol.IRP1.SysQuery_800,0xFF

@@ -80,7 +80,7 @@ namespace Invengo.Sample
 
                         }
 
-                        if (!dao.addPersona(this.datos[0], this.datos[2], this.datos[1], this.datos[3], this.datos[4], this.datos[5], this.datos[6], this.datos[7], this.datos[8], this.datos[9]))
+                        if (!dao.addPersona(this.datos[0], this.datos[1], this.datos[2], this.datos[3], this.datos[4], this.datos[5], this.datos[6], this.datos[7], this.datos[8], this.datos[9],this.datos[10]))
                         {
                             Console.WriteLine("Error al insertar persona");
                             //break;

@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<language Name="English">
+	<Form Name="FrScanMain">
+		<Control Name="FrScanMain" Value="UHF({0})" />
+		<Control Name="ibReadOnce" Value="Clear" />
+		<Control Name="ibOption" Value="Option" />
+		<Control Name="ibScan" Value="Read" />
+		<Control Name="dgcCount" Value="Times" />
+		<Control Name="ibScan2" Value="Stop" />
+	</Form>
+	<Form Name="FrReadWriteTag">
+		<Control Name="FrReadWriteTag" Value="Read/Write tag" />
+		<Control Name="lwOffsetAddr" Value="Offset(byte)" />
+		<Control Name="lwLength" Value="Lenght(bytes)" />
+		<Control Name="lwPassword" Value="Access password" />
+		<Control Name="ibRead" Value="Read" />
+		<Control Name="ibOption" Value="Option" />
+		<Control Name="ibWrite" Value="Write" />
+    <Control Name="ibWrite2" Value="Block erase" />
+	</Form>
+	<Form Name="FrLengthParas">
+		<Control Name="FrLengthParas" Value="Length parameter" />
+		<Control Name="btSet" Value="OK" />
+		<Control Name="label1" Value="ID length(bytes)" />
+		<Control Name="label2" Value="Userdata offset" />
+		<Control Name="label3" Value="Userdata length(bytes)" />
+    <Control Name="label4" Value="Access password" />
+	</Form>
+	<Form Name="FrScanTagMenu">
+		<Control Name="FrScanTagMenu" Value="" />
+		<Control Name="btScanSet" Value="Read Set" />
+		<Control Name="btClear" Value="Clear" />
+		<Control Name="btRwTag" Value="R/W Tag" />
+		<Control Name="btAntennaPower" Value="Power" />
+		<Control Name="btFrequency" Value="Frequency" />
+		<Control Name="btTagSet" Value="Tag Opt." />
+		<Control Name="btKillTag" Value="Kill Tag" />
+		<Control Name="btEpcMatch" Value="EPCMatch" />
+		<Control Name="btOverlapFilter" Value="Filter" />
+		<Control Name="btLockTag6B" Value="Lock Tag" />
+		<Control Name="btDataConfig" Value="Data Set" />
+		<Control Name="btVersion" Value="Version" />
+		<Control Name="btDebug" Value="Debug" />
+    <Control Name="btFindTags" Value="Find Tags" />
+    <Control Name="btReadProtect" Value="ReadProtect" />
+    <Control Name="btEasAlarm" Value="EAS Alarm" />
+	</Form>
+	<Form Name="FrScanTagOption">
+		<Control Name="FrScanTagOption" Value="Read Settings" />
+		<Control Name="btSet" Value="OK" />
+		<Control Name="label1" Value="Data area" />
+		<Control Name="label2" Value="Tag amount" />
+		<Control Name="label3" Value="Read interval" />
+		<Control Name="label4" Value="TID Length" />
+		<Control Name="label5" Value="(bytes)" />
+    <Control Name="label9" Value="Stop Condition" />
+    <Control Name="cbReadTime" Value="Read Time" />
+    <Control Name="cbtimes" Value="Tag  amount" />
+    <Control Name="chkRssi" Value= "RSSI" />
+		<Control Name="chkSound" Value="Sound" />
+		<Control Name="chkCharMode" Value="Char. display" />
+    <Control Name="cbEasAlarm" Value="Start EAS Monitor" />
+    <Control Name="label6" Value="Tag Type" />
+		<Control Name="cb1" Value="External RFID" />
+		<Control Name="cb2" Value="Internal RFID" />
+	</Form>
+	<Form Name="FrDataConfig">
+		<Control Name="FrDataConfig" Value="Data configuration" />
+		<Control Name="btSet" Value="OK" />
+		<Control Name="btQuery" Value="Cache data" />
+		<Control Name="chkSave" Value="Save data" />
+		<Control Name="chkUpload" Value="Upload data" />
+		<Control Name="label6" Value="Interval(ms)" />
+		<Control Name="label4" Value="IP Address" />
+		<Control Name="label5" Value="Port" />
+	</Form>
+	<Form Name="FrTagBuffer">
+		<Control Name="FrTagBuffer" Value="Cache data" />
+		<Control Name="btExport" Value="Export" />
+    <Control Name="btDeleteOne" Value="Delete" />
+		<Control Name="btDelete" Value="Delete all" />    
+		<Control Name="pnlFill" Value="Querying..." />
+		<Control Name="dgHeader0" Value="ID" />
+		<Control Name="dgHeader1" Value="EPC" />
+		<Control Name="dgHeader2" Value="Userdata" />
+		<Control Name="dgHeader3" Value="Time" />
+		<Control Name="label1" Value="Number of tags:" />
+	</Form>
+	<Form Name="FrVersion">
+		<Control Name="FrVersion" Value="Version" />
+		<Control Name="labelName" Value="UHF DEMO" />
+		<Control Name="labelVersion" Value="Appplication : {0} " />
+    <Control Name="labelCopyright" Value="Copyright (C) 2014 Invengo Information Technology Co,Ltd." />
+		<Control Name="osVersion" Value="Operating system: {0} Inside version: {1}" />
+		<Control Name="rfSwVersion" Value="RFID software:" />
+    <Control Name="rfHwVersion" Value="RFID hardware:" />
+		<Control Name="pnlFill" Value="Querying..." />
+	</Form>
+	<Form Name="FrAntennaPower_6C">
+		<Control Name="FrAntennaPower_6C" Value="Antenna Power" />
+		<Control Name="ibQuery" Value="Query" />
+		<Control Name="ibSetting" Value="Set" />
+		<Control Name="label1" Value="Value(dBm)" />
+		<Control Name="label2" Value="Set RF output." />
+		<Control Name="cb1" Value="Low" />
+		<Control Name="cb2" Value="Median" />
+		<Control Name="cb3" Value="Hight" />
+	</Form>
+	<Form Name="FrEpcFilter_6C">
+		<Control Name="FrEpcFilter_6C" Value="EPC Match" />
+		<Control Name="ibCancel" Value="Cancel" />
+		<Control Name="ibSetting" Value="Match" />
+		<Control Name="label1" Value="Tag's EPC" />
+		<Control Name="label2" Value="Select byte of EPC to match." />
+	</Form>
+	<Form Name="FrFrequency_6C">
+		<Control Name="FrFrequency_6C" Value="Frequency" />
+		<Control Name="ibQuery" Value="Query" />
+		<Control Name="ibSetting" Value="Set" />
+		<Control Name="label1" Value="select frequency in the list on the left." />
+	</Form>
+  <Form Name="FrFrequency_6B">
+    <Control Name="FrFrequency_6B" Value="Frequency" />
+    <Control Name="ibQuery" Value="Query" />
+    <Control Name="ibSetting" Value="Set" />
+    <Control Name="label1" Value="select frequency in the list on the left." />
+  </Form>
+	<Form Name="FrKillTag_6C">
+		<Control Name="FrKillTag_6C" Value="Kill Tag" />
+		<Control Name="lwEpcName" Value="Tag's EPC" />
+		<Control Name="lwKillPwd" Value="Kill password" />
+		<Control Name="ibSetting" Value="Kill" />
+	</Form>
+	<Form Name="FrOverlapFilter_6C">
+		<Control Name="FrOverlapFilter_6C" Value="Overlap Filter" />
+		<Control Name="ibCancel" Value="Cancel" />
+		<Control Name="ibSetting" Value="Set" />
+		<Control Name="label1" Value="Time" />
+		<Control Name="label3" Value="Configure or cancel filtering repeatedly acquired tags by time feature,ie. one specific tag is read once during a specific period of time: time factor *100(ms)=total interval time, range: 0~65535." />
+	</Form>
+	<Form Name="FrRwSetting_6C">
+		<Control Name="FrRwSetting_6C" Value="Read/Write Settings" />
+		<Control Name="ibSetting" Value="OK" />
+		<Control Name="label1" Value="Write mode" />
+		<Control Name="label2" Value="Block length(bytes)" />
+    <Control Name="label3" Value="Block size(bytes)" />
+		<Control Name="cb1" Value="Default" />
+		<Control Name="cb2" Value="Block write" />
+		<Control Name="cb3" Value="Block erase" />
+	</Form>
+  <Form Name="FrFindTag">
+    <Control Name="FrFindTag" Value="Find Tag" />
+    <Control Name="btFind" Value="Find" />
+    <Control Name="lwOffsetAddr" Value="Offset(bytes)" />
+    <Control Name="label2" Value="Find Data" />
+  </Form>
+	<Form Name="FrTagParameters_6C">
+		<Control Name="FrTagParameters_6C" Value="Tag Operating" />
+		<Control Name="lwAccessPwd" Value="Access password" />
+		<Control Name="ibSetting" Value="Set" />
+		<Control Name="rbNewAccessPassword" Value="New access password" />
+		<Control Name="rbKillPwd" Value="Kill password" />
+		<Control Name="rbTagLock" Value="Lock/Unlock" />
+    <Control Name="rbEAS" Value="EAS Bits" />
+		<Control Name="cb1" Value="Lock" />
+		<Control Name="cb2" Value="Unlock" />
+		<Control Name="cb3" Value="Permanent locked" />
+		<Control Name="cb4" Value="All memories" />
+		<Control Name="cb5" Value="TID memory" />
+		<Control Name="cb6" Value="EPC memory" />
+		<Control Name="cb7" Value="Userdata memory" />
+		<Control Name="cb8" Value="Access password memory" />
+		<Control Name="cb9" Value="Kill password memory" />
+    <Control Name="cb10" Value="Set" />
+    <Control Name="cb11" Value="Cancel" />
+	</Form>
+  <Form Name="FrBaudRateSet_6C">
+    <Control Name="FrBaudRateSet_6C" Value="Baud Rate" />
+    <Control Name="btQuery" Value="Query" />
+    <Control Name="btSet" Value="Set" />
+    <Control Name="label1" Value="Select Value(bps)" />
+    <Control Name="label2" Value="The baud rate is:" />
+  </Form>
+  <Form Name="FrComRateSet_6C">
+    <Control Name="FrComRateSet_6C" Value="Communication Rate" />
+    <Control Name="btQuery" Value="Query" />
+    <Control Name="btSet" Value="Set" />
+    <Control Name="label1" Value="Select Value(khz)" />
+    <Control Name="label2" Value="The communication rate is:" />
+  </Form>
+  <Form Name="FrComRateSet_6B">
+    <Control Name="FrComRateSet_6B" Value="Communication Rate" />
+    <Control Name="btQuery" Value="Query" />
+    <Control Name="btSet" Value="Set" />
+    <Control Name="label1" Value="Select Value(khz)" />
+    <Control Name="label2" Value="The communication rate is:" />
+  </Form>
+	<Form Name="FrAntennaPower_6B">
+		<Control Name="FrAntennaPower_6B" Value="Antenna Power" />
+		<Control Name="ibQuery" Value="Query" />
+		<Control Name="ibSetting" Value="Set" />
+		<Control Name="label1" Value="Value(dBm)" />
+		<Control Name="label2" Value="Adjust RF output(dBm)." />
+	</Form>
+	<Form Name="FrFrequency_6B">
+		<Control Name="FrFrequency_6B" Value="Frequency" />
+		<Control Name="ibQuery" Value="Query" />
+		<Control Name="ibSetting" Value="Set" />
+		<Control Name="label1" Value="Select frequency in the list on the left." />
+	</Form>
+	<Form Name="FrLockTag_6B">
+		<Control Name="FrLockTag_6B" Value="Tag Lock" />
+		<Control Name="ibQuery" Value="Query" />
+		<Control Name="ibClear" Value="Clear" />
+		<Control Name="ibLock" Value="Lock" />
+		<Control Name="label1" Value="Offset(bytes)" />
+		<Control Name="label2" Value="Length(bytes)" />
+	</Form>
+	<Form Name="FrCommonTesting">
+		<Control Name="FrCommonTesting" Value="Common Test" />
+		<Control Name="btOpenPower" Value="turn RF on" />
+		<Control Name="btClose" Value="turn RF off" />
+		<Control Name="btAgingMode" Value="Aging mode" />
+		<Control Name="btGenericMode" Value="Normal mode" />
+	</Form>
+	<Form Name="FrFirmwareUpdate">
+		<Control Name="FrFirmwareUpdate" Value="Baseband upgrade" />
+		<Control Name="txtInfo" Value="Current base band will be erased after executing this operation. Reboot reader after five seconds, and download new program." />
+		<Control Name="btUpdate" Value="upgrade" />
+	</Form>
+	<Form Name="FrFrequencyBand_6C">
+		<Control Name="FrFrequencyBand_6C" Value="Frequency Band" />
+		<Control Name="label1" Value="Band" />
+    <Control Name="label2" Value="CN:920Mhz~925Mhz,CN2:840Mhz~845Mhz,CN3:CN1+CN2,FCC:902Mhz~928Mhz,EU:865Mhz~868Mhz" />
+		<Control Name="btQuery" Value="Query" />
+		<Control Name="btSet" Value="Set" />
+	</Form>
+	<Form Name="FrFrequencyTesting">
+		<Control Name="FrFrequencyTesting" Value="Frequency Test" />
+		<Control Name="label1" Value="Tag" />
+		<Control Name="labelAddr" Value="Offset" />
+		<Control Name="labelLen" Value="Legnth(bytes)" />
+		<Control Name="label17" Value="Password" />
+		<Control Name="label2" Value="Data area" />
+		<Control Name="btTestSave" Value="Save" />
+		<Control Name="btStart" Value="Start" />
+		<Control Name="column1" Value="Frequency" />
+		<Control Name="column2" Value="Read" />
+		<Control Name="column3" Value="Write" />
+		<Control Name="btStart2" Value="Stop" />
+	</Form>
+	<Form Name="FrInitializePower_6C">
+		<Control Name="FrInitializePower_6C" Value="Power calibration" />
+		<Control Name="labelPowerInfo" Value="Click the [Start] to configure." />
+		<Control Name="label1" Value="Target power:" />
+		<Control Name="labelDbm" Value="Stepping:" />
+		<Control Name="label2" Value="Actual value:" />
+		<Control Name="buttonPowerStart" Value="Start" />
+		<Control Name="buttonPowerAdd" Value="Add" />
+		<Control Name="buttonPowerFinish" Value="Confirm" />
+		<Control Name="buttonPowerResetPower" Value="Reset" />
+		<Control Name="buttonPowerQuery" Value="Query" />
+	</Form>
+	<Form Name="FrInitializePower_6B">
+		<Control Name="FrInitializePower_6B" Value="Power calibration" />
+		<Control Name="labelPowerInfo" Value="Click the [Start] to configure." />
+		<Control Name="label1" Value="Target power" />
+		<Control Name="labelDbm" Value="Stepping" />
+		<Control Name="buttonPowerStart" Value="Start" />
+		<Control Name="buttonPowerAdd" Value="Add" />
+		<Control Name="buttonPowerFinish" Value="Confirm" />
+		<Control Name="buttonPowerResetPower" Value="Reset" />
+		<Control Name="buttonPowerQuery" Value="Query" />
+	</Form>
+	<Form Name="FrLog">
+		<Control Name="FrLog" Value="Testing Log" />
+		<Control Name="btExport" Value="Export" />
+    <Control Name="btDeleteOne" Value="Delete" />
+		<Control Name="btDelete" Value="Delete all" />
+		<Control Name="pnlFill" Value="Querying..." />
+		<Control Name="dgHeader0" Value="Name" />
+		<Control Name="dgHeader1" Value="Status" />
+		<Control Name="dgHeader2" Value="Message" />
+		<Control Name="dgHeader3" Value="Time" />
+	</Form>
+	<Form Name="FrPowerTesting">
+		<Control Name="FrPowerTesting" Value="Power Test" />
+		<Control Name="label1" Value="Tag" />
+		<Control Name="labelAddr" Value="Offset" />
+		<Control Name="labelLen" Value="Length(bytes)" />
+		<Control Name="label17" Value="password" />
+		<Control Name="label2" Value="Data bank" />
+		<Control Name="btTestSave" Value="Save" />
+		<Control Name="btStart" Value="Start" />
+		<Control Name="btStart2" Value="Stop" />
+		<Control Name="column1" Value="Power" />
+		<Control Name="column2" Value="Read" />
+		<Control Name="column3" Value="Write" />
+	</Form>
+	<Form Name="FrScanTagMenu_Debug">
+		<Control Name="FrScanTagMenu_Debug" Value="" />
+		<Control Name="btPowerAdjusting" Value="SetPower" />
+		<Control Name="btRwTesting" Value="R/WTest" />
+		<Control Name="btFrequencyTesting" Value="FH.Test" />
+		<Control Name="btPowerTesting" Value="PowerTest" />
+		<Control Name="btCommonTesting" Value="Common" />
+		<Control Name="btStaticTesting" Value="StaticTest" />
+		<Control Name="btFrequencyBand" Value="FH.Band" />
+		<Control Name="btFirmwareUpdate" Value="Update" />
+    <Control Name="btFrequency" Value="Frequency" />
+		<Control Name="btTestingLog" Value="Log" />
+    <Control Name="btBaudRateSet" Value="BaudRate" />
+    <Control Name="btComRateSet" Value="CommunicateionRate" />
+	</Form>
+	<Form Name="FrReadWriteTesting">
+		<Control Name="FrReadWriteTesting" Value="Read/Write Test" />
+		<Control Name="label1" Value="Tag" />
+		<Control Name="labelAddr" Value="Offset" />
+		<Control Name="labelLen" Value="Length(bytes)" />
+		<Control Name="label17" Value="password" />
+		<Control Name="label2" Value="Data area" />
+		<Control Name="chkWrite" Value="Write" />
+		<Control Name="chkRead" Value="Read" />
+		<Control Name="label3" Value="Times" />
+		<Control Name="btStart" Value="Start" />
+		<Control Name="btStart2" Value="Stop" />
+	</Form>
+  <Form Name="FrStaticTesting">
+    <Control Name="FrStaticTesting" Value="Static Test" />
+    <Control Name="rbDuration" Value="Duration(s)" />
+    <Control Name="rbTagNum" Value="Maximum numbers of tags" />
+    <Control Name="btOK" Value="OK" />
+    <Control Name="chkTestInterval" Value="Interval(ms)" />
+  </Form>
+  <Form Name="FrProtectTag">
+    <Control Name="FrProtectTag" Value="Tag read protection setting" />
+    <Control Name="lbpwd" Value="PassWord" />
+    <Control Name="ibSetting" Value="Setting" />
+    <Control Name="ibCancel" Value="Cancel" />
+  </Form>
+  <Message>
+		<Item Name="MSG_0" Value="Do you need to exit?" />
+		<Item Name="MSG_1" Value="Read failed, {0}!" />
+		<Item Name="MSG_2" Value="Read tag operation is performing." />
+		<Item Name="MSG_3" Value="Rate:{0}/s  tags:{1}" />
+		<Item Name="MSG_4" Value="Fail to open port!" />
+		<Item Name="MSG_5" Value="Read tag failed!" />
+		<Item Name="MSG_6" Value="Start reading tag failed!" />
+		<Item Name="MSG_7" Value="Stop read tag." />
+		<Item Name="MSG_8" Value="Failed, {0}!" />
+		<Item Name="MSG_9" Value="Acquired data {0} bytes." />
+		<Item Name="MSG_10" Value="Input the write data." />
+		<Item Name="MSG_11" Value="Input the tag password." />
+		<Item Name="MSG_12" Value="Write {0} bytes." />
+		<Item Name="MSG_13" Value="Write failed, {0}" />
+		<Item Name="MSG_14" Value="Block erase {0} bytes." />
+		<Item Name="MSG_15" Value="Get power-list failed!" />
+		<Item Name="MSG_16" Value="Current power:{0}dBm." />
+		<Item Name="MSG_17" Value="Query failed,{0}!" />
+		<Item Name="MSG_18" Value="Set successfully." />
+		<Item Name="MSG_19" Value="Failed, {0}!" />
+		<Item Name="MSG_20" Value="Input tag EPC(12-byte)!" />
+		<Item Name="MSG_21" Value="Select matched data!" />
+		<Item Name="MSG_22" Value="Configure EPC match completed." />
+		<Item Name="MSG_23" Value="Configure EPC match failed!" />
+		<Item Name="MSG_24" Value="Cancel match EPC." />
+		<Item Name="MSG_25" Value="Failed,{0}!" />
+		<Item Name="MSG_26" Value="Query frequency completed." />
+		<Item Name="MSG_27" Value="No frequency." />
+		<Item Name="MSG_28" Value="Set frequency completed." />
+		<Item Name="MSG_29" Value="No frequency." />
+		<Item Name="MSG_30" Value="Max number of frequencies reaches! " />
+		<Item Name="MSG_31" Value="Set EPC of tag to operate!" />
+		<Item Name="MSG_32" Value="Input tag kill password!" />
+		<Item Name="MSG_33" Value="Do you need to kill tag?" />
+		<Item Name="MSG_34" Value="Kill tag operation completed." />
+		<Item Name="MSG_35" Value="Failed,{0}!" />
+		<Item Name="MSG_36" Value="Cancel filter." />
+		<Item Name="MSG_37" Value="Failed, {0}!" />
+		<Item Name="MSG_38" Value="Set filter." />
+		<Item Name="MSG_39" Value="Failed,{0}!" />
+		<Item Name="MSG_40" Value="Select tag to operate!" />
+		<Item Name="MSG_41" Value="Input the access password!" />
+		<Item Name="MSG_42" Value="Input the new access password!" />
+		<Item Name="MSG_43" Value="Set access password completed." />
+		<Item Name="MSG_44" Value="Failed, {0}!" />
+		<Item Name="MSG_45" Value="Input the new kill password!" />
+		<Item Name="MSG_46" Value="Set the kill password completed." />
+		<Item Name="MSG_47" Value="Failed, {0}!" />
+		<Item Name="MSG_48" Value="Select operation type!" />
+		<Item Name="MSG_49" Value="Select operating memory!" />
+		<Item Name="MSG_50" Value="Unlock tag successfully." />
+		<Item Name="MSG_51" Value="Lock tag successfully." />
+		<Item Name="MSG_52" Value="Unlock failed, {0}!" />
+		<Item Name="MSG_53" Value="Lock failed, {0}!" />
+		<Item Name="MSG_54" Value="Locking tab will result in not re-write data, confirm to lock tag?" />
+		<Item Name="MSG_55" Value="Locked, addr.{0}, length {1} bytes." />
+		<Item Name="MSG_56" Value="Lock failed,{0}." />
+		<Item Name="MSG_57" Value="{0}byte: lock" />
+		<Item Name="MSG_58" Value="{0}byte: unlock" />
+		<Item Name="MSG_59" Value="Query lock state failed,{0}." />
+		<Item Name="MSG_60" Value="Turn RFID on." />
+		<Item Name="MSG_61" Value="Turn RFID on failed." />
+		<Item Name="MSG_62" Value="Turn RFID off." />
+		<Item Name="MSG_63" Value="Turn RFID off failed." />
+		<Item Name="MSG_64" Value="Enter aging mode." />
+		<Item Name="MSG_65" Value="Failed, {0}" />
+		<Item Name="MSG_66" Value="Enter normal mode." />
+		<Item Name="MSG_67" Value="After performing this operation, RFID baseband prgram will be erased and it will requires burning program, do you proceed?" />
+		<Item Name="MSG_68" Value="Upgrade completed, reburing is required." />
+		<Item Name="MSG_69" Value="Current band: {0}" />
+		<Item Name="MSG_70" Value="Set band: {0}." />
+		<Item Name="MSG_71" Value="{0}Mhz, set frequency failed!" />
+		<Item Name="MSG_72" Value="{0}Mhz, write tag failed!" />
+		<Item Name="MSG_73" Value="{0}Mhz, write tag successfully!" />
+		<Item Name="MSG_74" Value="{0}Mhz, read failed!" />
+		<Item Name="MSG_75" Value="{0}Mhz, read successfully!" />
+		<Item Name="MSG_76" Value="Test completed!" />
+		<Item Name="MSG_77" Value="No valid value." />
+		<Item Name="MSG_78" Value="Select read/write operation!" />
+		<Item Name="MSG_79" Value="Save test log successfully." />
+		<Item Name="MSG_80" Value="Save log failed!" />
+		<Item Name="MSG_81" Value="Failed to set frequency as 922.625. Do you want to continue?" />
+		<Item Name="MSG_82" Value="Enter the configuration state." />
+		<Item Name="MSG_83" Value="Enter the configuration state failed!" />
+		<Item Name="MSG_84" Value="Move {0}power value downward." />
+		<Item Name="MSG_85" Value="Move power value downward failed!" />
+		<Item Name="MSG_86" Value="Move {0} power value upward." />
+		<Item Name="MSG_87" Value="Move power value upward failed!" />
+		<Item Name="MSG_88" Value="Add power value successfully." />
+		<Item Name="MSG_89" Value="Add power value failed, {0}!" />
+		<Item Name="MSG_90" Value="Power value can not be added when configuration is completed. resetting is required to reconfigure. do you need to complete this operation?" />
+		<Item Name="MSG_91" Value="Configuration successfully." />
+		<Item Name="MSG_92" Value="Restoring frequency operation failed!" />
+		<Item Name="MSG_93" Value="Configuration failed!" />
+		<Item Name="MSG_94" Value="Power list status: configured" />
+		<Item Name="MSG_95" Value="Power value: {0}" />
+		<Item Name="MSG_96" Value="Power list status: not configured" />
+		<Item Name="MSG_97" Value="Get power list successfully." />
+		<Item Name="MSG_98" Value="Do you need to reset power list?" />
+		<Item Name="MSG_99" Value="Reset power list successfully." />
+		<Item Name="MSG_100" Value="Do you need to export log?" />
+		<Item Name="MSG_101" Value="Export completed." />
+		<Item Name="MSG_102" Value="Export failed!" />
+		<Item Name="MSG_103" Value="Do you need to delete all logs?" />
+		<Item Name="MSG_104" Value="All logs are deleted." />
+		<Item Name="MSG_105" Value="Delete all log failed!" />
+		<Item Name="MSG_106" Value="No.{0}dBm,set power failed!" />
+		<Item Name="MSG_107" Value="No.{0}dBm,write failed!" />
+		<Item Name="MSG_108" Value="No.{0}dBm,write successfully!" />
+		<Item Name="MSG_109" Value="No.{0}dBm,read failed!" />
+		<Item Name="MSG_110" Value="No.{0}dBm,read successfully!" />
+		<Item Name="MSG_111" Value="No.{0}time,write failed!" />
+		<Item Name="MSG_112" Value="No.{0}time,write successfully!" />
+		<Item Name="MSG_113" Value="No.{0}time,read failed!" />
+		<Item Name="MSG_114" Value="No.{0}time,read successfully!" />
+		<Item Name="MSG_115" Value="No.{0}time,write:{1} times,read {2} times." />
+		<Item Name="MSG_116" Value="No.{0}time,read/write data inconsistent!" />
+		<Item Name="MSG_117" Value="OK!W/R:{0} times/{1} times, rate {2}%." />
+    <Item Name="MSG_118" Value="Data length: {0}bytes." />
+    <Item Name="MSG_119" Value="Do you need to delete log?" />
+    <Item Name="MSG_120" Value="Log is deleted." />
+    <Item Name="MSG_121" Value="Delete log failed!" />
+    <Item Name="MSG_122" Value="Data length must be a multiple of the block length!" />
+    <Item Name="MSG_123" Value="RFID Model can not working!" />
+    <Item Name="MSG_124" Value="Current Rate: {0}" />
+    <Item Name="MSG_125" Value="Set Rate: {0}." />
+    <Item Name="MSG_126" Value="{0}, set CommunicationRate failed!" />
+    <Item Name="MSG_127" Value="The Find Data Can not be empty!" />
+    <Item Name="MSG_128" Value="The Find Data length must be even!" />
+    <Item Name="MSG_129" Value="Finding" />
+    <Item Name="MSG_130" Value="Find failed,{0}!" />
+    <Item Name="MSG_131" Value="Set EAS Bits failed,{0}!" />
+    <Item Name="MSG_132" Value="Cancel EAS Bits failed,{0}!" />
+    <Item Name="MSG_133" Value="Set EA Bits successfully!" />
+    <Item Name="MSG_134" Value="Cancel EAS Bits successfully!" />
+    <Item Name="MSG_135" Value="Set Read Protect failed,{0}!" />
+    <Item Name="MSG_136" Value="Cancel Read Protect failed,{0}!" />
+    <Item Name="MSG_137" Value="Set Read Protect successfully!" />
+    <Item Name="MSG_138" Value="Cancel Read Protect successfully!" />
+    <Item Name="MSG_139" Value="Tag Data can not be empty!" />
+    <Item Name="MSG_140" Value="EAS Alarm is performing.!" />
+    <Item Name="MSG_141" Value="EAS Alarm has stopped!" />
+    <Item Name="MSG_142" Value="EAS Alarm Start successfully!" />
+    <Item Name="MSG_143" Value="EAS Alarm Start failed!" />
+    <Item Name="MSG_144" Value="Set failed,Read time can not less than 10(s)!" />
+    <Item Name="MSG_145" Value="Set failed,Read time can not greater than 300(s)!" />
+	</Message>
+</language>

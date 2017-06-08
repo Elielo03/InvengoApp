@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<language Name="中文">
+	<Form Name="FrScanMain">
+		<Control Name="FrScanMain" Value="UHF({0})" />
+		<Control Name="ibReadOnce" Value="清空" />
+		<Control Name="ibOption" Value="选项" />
+		<Control Name="ibScan" Value="读取" />
+		<Control Name="dgcCount" Value="次数" />
+		<Control Name="ibScan2" Value="停止" />
+	</Form>
+	<Form Name="FrReadWriteTag">
+		<Control Name="FrReadWriteTag" Value="读写标签" />
+		<Control Name="lwOffsetAddr" Value="起始地址(字节)" />
+		<Control Name="lwLength" Value="读取长度(字节)" />
+		<Control Name="lwPassword" Value="访问密码" />
+		<Control Name="ibRead" Value="读取" />
+		<Control Name="ibOption" Value="选项" />
+		<Control Name="ibWrite" Value="写入" />
+    <Control Name="ibWrite2" Value="块擦" />
+	</Form>
+	<Form Name="FrLengthParas">
+		<Control Name="FrLengthParas" Value="长度参数" />
+		<Control Name="btSet" Value="确定" />
+		<Control Name="label1" Value="ID长度(字节)" />
+		<Control Name="label2" Value="用户数据起始地址" />
+		<Control Name="label3" Value="用户数据长度(字节)" />
+    <Control Name="label4" Value="访问密码" />
+	</Form>
+	<Form Name="FrScanTagMenu">
+		<Control Name="FrScanTagMenu" Value="" />
+		<Control Name="btScanSet" Value="读取设置" />
+		<Control Name="btClear" Value="清空" />
+		<Control Name="btRwTag" Value="读写标签" />
+		<Control Name="btAntennaPower" Value="功率设置" />
+		<Control Name="btFrequency" Value="频率设置" />
+		<Control Name="btTagSet" Value="标签配置" />
+		<Control Name="btKillTag" Value="销毁标签" />
+		<Control Name="btEpcMatch" Value="EPC匹配" />
+		<Control Name="btOverlapFilter" Value="重复过滤" />
+		<Control Name="btLockTag6B" Value="锁定标签" />
+		<Control Name="btDataConfig" Value="数据配置" />
+		<Control Name="btVersion" Value="版本" />
+		<Control Name="btDebug" Value="内部调试" />
+    <Control Name="btFindTags" Value="查找标签" />
+    <Control Name="btReadProtect" Value="读取保护" />
+    <Control Name="btEasAlarm" Value="EAS监控" />
+	</Form>
+	<Form Name="FrScanTagOption">
+		<Control Name="FrScanTagOption" Value="读取设置" />
+		<Control Name="btSet" Value="确定" />
+		<Control Name="label1" Value="数据区域" />
+		<Control Name="label2" Value="预读标签数" />
+		<Control Name="label3" Value="读卡间隔" />
+		<Control Name="label4" Value="TID长度" />
+		<Control Name="label5" Value="(字节)" />
+    <Control Name="label9" Value="读取停止条件" />
+    <Control Name="cbReadTime" Value="读取时间" />
+    <Control Name="cbtimes" Value="读取张数" />
+    <Control Name="chkRssi" Value= "标签回波强度" />
+    <Control Name="chkSound" Value="提示声音" />
+		<Control Name="chkCharMode" Value="字符显示" />
+    <Control Name="cbEasAlarm" Value="启动EAS监控" />
+    <Control Name="label6" Value="标签类型" />
+		<Control Name="cb1" Value="外置RFID模块" />
+		<Control Name="cb2" Value="内置RFID模块" />
+	</Form>
+	<Form Name="FrDataConfig">
+		<Control Name="FrDataConfig" Value="数据设置" />
+		<Control Name="btSet" Value="确定" />
+		<Control Name="btQuery" Value="缓存数据" />
+		<Control Name="chkSave" Value="保存数据" />
+		<Control Name="chkUpload" Value="上传数据" />
+		<Control Name="label6" Value="处理间隔(ms)" />
+		<Control Name="label4" Value="IP地址" />
+		<Control Name="label5" Value="端口" />
+	</Form>
+	<Form Name="FrTagBuffer">
+		<Control Name="FrTagBuffer" Value="缓存数据" />
+		<Control Name="btExport" Value="导 出" />
+    <Control Name="btDeleteOne" Value="删 除" />
+    <Control Name="btDelete" Value="删除所有" />
+    <Control Name="pnlFill" Value="正在查询..." />
+		<Control Name="dgHeader0" Value="ID" />
+		<Control Name="dgHeader1" Value="EPC" />
+		<Control Name="dgHeader2" Value="用户数据" />
+		<Control Name="dgHeader3" Value="时间" />
+		<Control Name="label1" Value="已存标签数量:" />
+	</Form>
+	<Form Name="FrVersion">
+		<Control Name="FrVersion" Value="版本信息" />
+		<Control Name="labelName" Value="UHF DEMO" />
+		<Control Name="labelVersion" Value="版本: {0} " />
+    <Control Name="labelCopyright" Value="版权(C) 2014 深圳远望谷信息技术股份有限公司" />
+		<Control Name="osVersion" Value="操作系统: {0}  内核版本: {1}" />
+		<Control Name="rfSwVersion" Value="RFID软件版本:" />
+    <Control Name="rfHwVersion" Value="RFID硬件版本:" />
+		<Control Name="pnlFill" Value="正在查询..." />
+	</Form>
+	<Form Name="FrAntennaPower_6C">
+		<Control Name="FrAntennaPower_6C" Value="功率设置" />
+		<Control Name="ibQuery" Value="查询" />
+		<Control Name="ibSetting" Value="设置" />
+		<Control Name="label1" Value="功率值(dBm)" />
+		<Control Name="label2" Value="调整读写模块的射频输出功率." />
+		<Control Name="cb1" Value="低" />
+		<Control Name="cb2" Value="中" />
+		<Control Name="cb3" Value="高" />
+	</Form>
+	<Form Name="FrEpcFilter_6C">
+		<Control Name="FrEpcFilter_6C" Value="EPC匹配" />
+		<Control Name="ibCancel" Value="取消匹配" />
+		<Control Name="ibSetting" Value="设置匹配" />
+		<Control Name="label1" Value="标签EPC" />
+		<Control Name="label2" Value="选择需要匹配的EPC码字节." />
+	</Form>
+	<Form Name="FrFrequency_6C">
+		<Control Name="FrFrequency_6C" Value="频率设置" />
+		<Control Name="ibQuery" Value="查询" />
+		<Control Name="ibSetting" Value="设置" />
+		<Control Name="label1" Value="从左列表选择目标频点进行设置." />
+	</Form>
+  <Form Name="FrFrequency_6B">
+    <Control Name="FrFrequency_6B" Value="频率设置" />
+    <Control Name="ibQuery" Value="查询" />
+    <Control Name="ibSetting" Value="设置" />
+    <Control Name="label1" Value="从左列表选择目标频点进行设置." />
+  </Form>
+	<Form Name="FrKillTag_6C">
+		<Control Name="FrKillTag_6C" Value="销毁标签" />
+		<Control Name="lwEpcName" Value="标签EPC" />
+		<Control Name="lwKillPwd" Value="销毁密码" />
+		<Control Name="ibSetting" Value="销毁" />
+	</Form>
+	<Form Name="FrOverlapFilter_6C">
+		<Control Name="FrOverlapFilter_6C" Value="重复过滤时间" />
+		<Control Name="ibCancel" Value="取消" />
+		<Control Name="ibSetting" Value="设置" />
+		<Control Name="label1" Value="时间" />
+		<Control Name="label3" Value="配置或取消重复标签按时间过滤的功能， 即一张标签在指定的时间内只读出1次； 时间因子*100(毫秒)为总间隔时间， 值范围：0~65535。" />
+	</Form>
+	<Form Name="FrRwSetting_6C">
+		<Control Name="FrRwSetting_6C" Value="读写设置" />
+		<Control Name="ibSetting" Value="确定" />
+		<Control Name="label1" Value="写入方式" />
+		<Control Name="label2" Value="块长度(字节)" />
+    <Control Name="label3" Value="块数(字节)" />
+    <Control Name="cb1" Value="默认" />
+		<Control Name="cb2" Value="块写" />
+		<Control Name="cb3" Value="块擦" />
+	</Form>
+  <Form Name="FrFindTag">
+    <Control Name="FrFindTag" Value="查找标签" />
+    <Control Name="btFind" Value="查找" />
+    <Control Name="lwOffsetAddr" Value="起始地址(字节)" />
+    <Control Name="label2" Value="查找数据" />
+  </Form>
+	<Form Name="FrTagParameters_6C">
+		<Control Name="FrTagParameters_6C" Value="标签配置" />
+		<Control Name="lwAccessPwd" Value="原访问密码" />
+		<Control Name="ibSetting" Value="设置" />
+		<Control Name="rbNewAccessPassword" Value="新访问密码" />
+		<Control Name="rbKillPwd" Value="销毁密码" />
+		<Control Name="rbTagLock" Value="锁定/解锁" />
+    <Control Name="rbEAS" Value="EAS比特位" />
+		<Control Name="cb1" Value="锁定" />
+		<Control Name="cb2" Value="解锁定" />
+		<Control Name="cb3" Value="永久锁定" />
+		<Control Name="cb4" Value="所有区域" />
+		<Control Name="cb5" Value="TID 区" />
+		<Control Name="cb6" Value="EPC 区" />
+		<Control Name="cb7" Value="用户数据区" />
+		<Control Name="cb8" Value="访问密码区" />
+		<Control Name="cb9" Value="销毁密码区" />
+    <Control Name="cb10" Value="设置" />
+    <Control Name="cb11" Value="取消" />
+	</Form>
+  <Form Name="FrBaudRateSet_6C">
+    <Control Name="FrBaudRateSet_6C" Value="波特率设定" />
+    <Control Name="btQuery" Value="查询" />
+    <Control Name="btSet" Value="设置" />
+    <Control Name="label1" Value="选择波特率(bps)" />
+    <Control Name="label2" Value="当前的波特率是:" />
+  </Form>
+  <Form Name="FrComRateSet_6C">
+    <Control Name="FrComRateSet_6C" Value="通讯速率设定" />
+    <Control Name="btQuery" Value="查询" />
+    <Control Name="btSet" Value="设置" />
+    <Control Name="label1" Value="选择通讯速率(khz)" />
+    <Control Name="label2" Value="当前的通讯速率是:" />
+  </Form>
+  <Form Name="FrComRateSet_6B">
+    <Control Name="FrComRateSet_6B" Value="通讯速率设定" />
+    <Control Name="btQuery" Value="查询" />
+    <Control Name="btSet" Value="设置" />
+    <Control Name="label1" Value="选择通讯速率(khz)" />
+    <Control Name="label2" Value="当前的通讯速率是:" />
+  </Form>
+	<Form Name="FrAntennaPower_6B">
+		<Control Name="FrAntennaPower_6B" Value="功率设置" />
+		<Control Name="ibQuery" Value="查询" />
+		<Control Name="ibSetting" Value="设置" />
+		<Control Name="label1" Value="功率值(dBm)" />
+		<Control Name="label2" Value="调整读写模块的射频输出功率." />
+	</Form>
+  <Form Name="FrAntennaPower_6B">
+    <Control Name="FrAntennaPower_6B" Value="功率设置" />
+    <Control Name="ibQuery" Value="查询" />
+    <Control Name="ibSetting" Value="设置" />
+    <Control Name="label1" Value="功率值(dBm)" />
+    <Control Name="label2" Value="调整读写模块的射频输出功率." />
+  </Form>
+	
+	<Form Name="FrLockTag_6B">
+		<Control Name="FrLockTag_6B" Value="标签锁定" />
+		<Control Name="ibQuery" Value="查询" />
+		<Control Name="ibClear" Value="清空" />
+		<Control Name="ibLock" Value="锁定" />
+		<Control Name="label1" Value="起始地址(字节)" />
+		<Control Name="label2" Value="长度(字节)" />
+	</Form>
+	<Form Name="FrCommonTesting">
+		<Control Name="FrCommonTesting" Value="常用测试" />
+		<Control Name="btOpenPower" Value="开功放" />
+		<Control Name="btClose" Value="关功放" />
+		<Control Name="btAgingMode" Value="老化模式" />
+		<Control Name="btGenericMode" Value="正常模式" />
+	</Form>
+	<Form Name="FrFirmwareUpdate">
+		<Control Name="FrFirmwareUpdate" Value="基带升级" />
+		<Control Name="txtInfo" Value="执行该操作, 将擦除读写器现有基带程序, 5秒后重启读写器,使用相应工具下载新程序." />
+		<Control Name="btUpdate" Value="升级" />
+	</Form>
+	<Form Name="FrFrequencyBand_6C">
+		<Control Name="FrFrequencyBand_6C" Value="设置频段" />
+		<Control Name="label1" Value="选择频段" />
+    <Control Name="label2" Value="CN:920Mhz~925Mhz,CN2:840Mhz~845Mhz,CN3:CN1+CN2,FCC:902Mhz~928Mhz,EU:865Mhz~868Mhz" />
+		<Control Name="btQuery" Value="查询" />
+		<Control Name="btSet" Value="设置" />
+	</Form>
+	<Form Name="FrFrequencyTesting">
+		<Control Name="FrFrequencyTesting" Value="频率测试" />
+		<Control Name="label1" Value="标签" />
+		<Control Name="labelAddr" Value="地址" />
+		<Control Name="labelLen" Value="长度(字节)" />
+		<Control Name="label17" Value="密码" />
+		<Control Name="label2" Value="数据区" />
+		<Control Name="btTestSave" Value="保存" />
+		<Control Name="btStart" Value="启动" />
+		<Control Name="column1" Value="频点" />
+		<Control Name="column2" Value="读取" />
+		<Control Name="column3" Value="写入" />
+		<Control Name="btStart2" Value="停止" />
+	</Form>
+	<Form Name="FrInitializePower_6C">
+		<Control Name="FrInitializePower_6C" Value="功率校准(6C)" />
+		<Control Name="labelPowerInfo" Value="单击[开始]进入配置功率表状态." />
+		<Control Name="label1" Value="目标功率:" />
+		<Control Name="labelDbm" Value="移动步进:" />
+		<Control Name="label2" Value="当前功率值:" />
+		<Control Name="buttonPowerStart" Value="开始" />
+		<Control Name="buttonPowerAdd" Value="添加" />
+		<Control Name="buttonPowerFinish" Value="完成配置" />
+		<Control Name="buttonPowerResetPower" Value="重置" />
+		<Control Name="buttonPowerQuery" Value="查询" />
+	</Form>
+	<Form Name="FrInitializePower_6B">
+		<Control Name="FrInitializePower_6B" Value="功率校准(6B)" />
+		<Control Name="labelPowerInfo" Value="单击[开始]进入配置功率表状态." />
+		<Control Name="label1" Value="目标功率" />
+		<Control Name="labelDbm" Value="移动步进" />
+		<Control Name="buttonPowerStart" Value="开始" />
+		<Control Name="buttonPowerAdd" Value="添加" />
+		<Control Name="buttonPowerFinish" Value="完成配置" />
+		<Control Name="buttonPowerResetPower" Value="重置" />
+		<Control Name="buttonPowerQuery" Value="查询" />
+	</Form>
+	<Form Name="FrLog">
+		<Control Name="FrLog" Value="测试记录" />
+		<Control Name="btExport" Value="导 出" />
+    <Control Name="btDeleteOne" Value="删 除" />
+		<Control Name="btDelete" Value="删除所有" />
+		<Control Name="pnlFill" Value="正在查询..." />
+		<Control Name="dgHeader0" Value="名称" />
+		<Control Name="dgHeader1" Value="状态" />
+		<Control Name="dgHeader2" Value="描述" />
+		<Control Name="dgHeader3" Value="时间" />
+	</Form>
+	<Form Name="FrPowerTesting">
+		<Control Name="FrPowerTesting" Value="功率测试" />
+		<Control Name="label1" Value="标签" />
+		<Control Name="labelAddr" Value="地址" />
+		<Control Name="labelLen" Value="长度(字节)" />
+		<Control Name="label17" Value="密码" />
+		<Control Name="label2" Value="数据区" />
+		<Control Name="btTestSave" Value="保存" />
+		<Control Name="btStart" Value="启动" />
+		<Control Name="btStart2" Value="停止" />
+		<Control Name="column1" Value="功率" />
+		<Control Name="column2" Value="读取" />
+		<Control Name="column3" Value="写入" />
+	</Form>
+	<Form Name="FrScanTagMenu_Debug">
+		<Control Name="FrScanTagMenu_Debug" Value="" />
+		<Control Name="btPowerAdjusting" Value="功率校准" />
+		<Control Name="btRwTesting" Value="重复读写" />
+		<Control Name="btFrequencyTesting" Value="频率测试" />
+		<Control Name="btPowerTesting" Value="功率测试" />
+		<Control Name="btCommonTesting" Value="常用测试" />
+		<Control Name="btStaticTesting" Value="静态测试" />
+		<Control Name="btFrequencyBand" Value="频段设置" />
+		<Control Name="btFirmwareUpdate" Value="基带升级" />
+    <Control Name="btFrequency" Value="频率设置" />
+		<Control Name="btTestingLog" Value="测试记录" />
+    <Control Name="btBaudRateSet" Value="波特率" />
+    <Control Name="btComRateSet" Value="通讯速率" />
+	</Form>
+	<Form Name="FrReadWriteTesting">
+		<Control Name="FrReadWriteTesting" Value="重复读写" />
+		<Control Name="label1" Value="标签" />
+		<Control Name="labelAddr" Value="地址" />
+		<Control Name="labelLen" Value="长度(字节)" />
+		<Control Name="label17" Value="密码" />
+		<Control Name="label2" Value="数据区" />
+		<Control Name="chkWrite" Value="写入" />
+		<Control Name="chkRead" Value="读取" />
+		<Control Name="label3" Value="次数" />
+		<Control Name="btStart" Value="启动" />
+		<Control Name="btStart2" Value="停止" />
+	</Form>
+  <Form Name="FrStaticTesting">
+    <Control Name="FrStaticTesting" Value="静态测试" />
+    <Control Name="rbDuration" Value="时间段(s)" />
+    <Control Name="rbTagNum" Value="最大张数" />
+    <Control Name="btOK" Value="确定" />
+    <Control Name="chkTestInterval" Value="读标签间隔时间(ms)" />
+  </Form>
+  <Form Name="FrProtectTag">
+    <Control Name="FrProtectTag" Value="标签读取保护设置" />
+    <Control Name="lbpwd" Value="保护密码" />
+    <Control Name="ibSetting" Value="设置保护" />
+    <Control Name="ibCancel" Value="取消保护" />
+  </Form>
+  <Message>
+		<Item Name="MSG_0" Value="确定要退出?" />
+		<Item Name="MSG_1" Value="读取标签失败,{0}!" />
+		<Item Name="MSG_2" Value="正在读标签" />
+		<Item Name="MSG_3" Value="速率:{0}/s  张数:{1}" />
+		<Item Name="MSG_4" Value="打开端口败!" />
+		<Item Name="MSG_5" Value="读标签失败!" />
+		<Item Name="MSG_6" Value="开启读标签失败!" />
+		<Item Name="MSG_7" Value="停止读标签." />
+		<Item Name="MSG_8" Value="失败, {0}!" />
+		<Item Name="MSG_9" Value="读出数据 {0} 字节." />
+		<Item Name="MSG_10" Value="请输入写入的数据." />
+		<Item Name="MSG_11" Value="请输入标签密码." />
+		<Item Name="MSG_12" Value="写入数据 {0} 字节." />
+		<Item Name="MSG_13" Value="写入失败,{0}" />
+		<Item Name="MSG_14" Value="块擦数据 {0} 字节." />
+		<Item Name="MSG_15" Value="获取不到功率表!" />
+		<Item Name="MSG_16" Value="当前功率是:{0}dBm." />
+		<Item Name="MSG_17" Value="查询失败,{0}!" />
+		<Item Name="MSG_18" Value="设置成功." />
+		<Item Name="MSG_19" Value="设置失败,{0}!" />
+		<Item Name="MSG_20" Value="请输入标签的EPC码(12字节)!" />
+		<Item Name="MSG_21" Value="请选择匹配数据!" />
+		<Item Name="MSG_22" Value="设置EPC匹配成功." />
+		<Item Name="MSG_23" Value="设置EPC匹配失败!" />
+		<Item Name="MSG_24" Value="取消了EPC匹配." />
+		<Item Name="MSG_25" Value="获取频段失败,{0}!" />
+		<Item Name="MSG_26" Value="查询频点成功." />
+		<Item Name="MSG_27" Value="没有选择频点." />
+		<Item Name="MSG_28" Value="设置频率成功." />
+		<Item Name="MSG_29" Value="没有设置的频点." />
+		<Item Name="MSG_30" Value="已达到最多频点!" />
+		<Item Name="MSG_31" Value="请指定目标标签EPC!" />
+		<Item Name="MSG_32" Value="请输入标签销毁密码!" />
+		<Item Name="MSG_33" Value="确定要销毁标签?" />
+		<Item Name="MSG_34" Value="销毁标签成功." />
+		<Item Name="MSG_35" Value="失败,{0}!" />
+		<Item Name="MSG_36" Value="取消了重复过滤时间." />
+		<Item Name="MSG_37" Value="失败, {0}!" />
+		<Item Name="MSG_38" Value="设置重复过滤时间成功." />
+		<Item Name="MSG_39" Value="失败,{0}!" />
+		<Item Name="MSG_40" Value="请选择目标的标签!" />
+		<Item Name="MSG_41" Value="请输入原访问密码!" />
+		<Item Name="MSG_42" Value="请输入新的访问密码!" />
+		<Item Name="MSG_43" Value="设置访问密码成功." />
+		<Item Name="MSG_44" Value="设置访问密码失败, {0}!" />
+		<Item Name="MSG_45" Value="请输入新的销毁密码!" />
+		<Item Name="MSG_46" Value="设置销毁密码成功." />
+		<Item Name="MSG_47" Value="设置销毁密码失败, {0}!" />
+		<Item Name="MSG_48" Value="请选择操作类型!" />
+		<Item Name="MSG_49" Value="请选择操作区域!" />
+		<Item Name="MSG_50" Value="解锁标签成功." />
+		<Item Name="MSG_51" Value="锁定标签成功." />
+		<Item Name="MSG_52" Value="解锁标签失败, {0}!" />
+		<Item Name="MSG_53" Value="锁定标签失败, {0}!" />
+		<Item Name="MSG_54" Value="锁定标签将导致不能再次写入数据，确定要锁定标签?" />
+		<Item Name="MSG_55" Value="锁定了从地址{0}开始,长度是{1}字节的数据." />
+		<Item Name="MSG_56" Value="锁定失败,{0}." />
+		<Item Name="MSG_57" Value="{0}字节: 锁定" />
+		<Item Name="MSG_58" Value="{0}字节: 未锁定" />
+		<Item Name="MSG_59" Value="查询标签锁状态失败,{0}." />
+		<Item Name="MSG_60" Value="打开RFID功放" />
+		<Item Name="MSG_61" Value="打开RFID功放失败." />
+		<Item Name="MSG_62" Value="关闭RFID功放." />
+		<Item Name="MSG_63" Value="关闭功放失败." />
+		<Item Name="MSG_64" Value="进入老化模式." />
+		<Item Name="MSG_65" Value="失败, {0}" />
+		<Item Name="MSG_66" Value="进入正常工作模式." />
+		<Item Name="MSG_67" Value="执行该操作,会擦除RFID的基带程序,需要另外烧录程序, 仍然要继续?" />
+		<Item Name="MSG_68" Value="升级成功,重新进行烧录." />
+		<Item Name="MSG_69" Value="当前频段: {0}" />
+		<Item Name="MSG_70" Value="设置频段: {0}." />
+		<Item Name="MSG_71" Value="{0}Mhz,设置频率失败!" />
+		<Item Name="MSG_72" Value="{0}Mhz,写入失败!" />
+		<Item Name="MSG_73" Value="{0}Mhz,写入成功!" />
+		<Item Name="MSG_74" Value="{0}Mhz,读出失败!" />
+		<Item Name="MSG_75" Value="{0}Mhz,读出成功!" />
+		<Item Name="MSG_76" Value="测试完成!" />
+		<Item Name="MSG_77" Value="没有有效的值." />
+		<Item Name="MSG_78" Value="请选择读写操作!" />
+		<Item Name="MSG_79" Value="保存测试记录成功." />
+		<Item Name="MSG_80" Value="保存测试记录失败!" />
+		<Item Name="MSG_81" Value="配置频点为922.625失败，请确认是否继续设置" />
+		<Item Name="MSG_82" Value="进入配置状态成功." />
+		<Item Name="MSG_83" Value="进入配置状态失败!" />
+		<Item Name="MSG_84" Value="下移了{0}个功率值." />
+		<Item Name="MSG_85" Value="下移功率值失败!" />
+		<Item Name="MSG_86" Value="上移了{0}个功率值." />
+		<Item Name="MSG_87" Value="上移功率值失败!" />
+		<Item Name="MSG_88" Value="添加功率值成功." />
+		<Item Name="MSG_89" Value="添加功率值失败, {0}!" />
+		<Item Name="MSG_90" Value="完成配置之后就不能继续添加功率值，必须得重置才能重新配置。确定要完成配置?" />
+		<Item Name="MSG_91" Value="完成配置成功." />
+		<Item Name="MSG_92" Value="恢复频点失败!" />
+		<Item Name="MSG_93" Value="完成配置失败!" />
+		<Item Name="MSG_94" Value="功率表状态: 已配置" />
+		<Item Name="MSG_95" Value="功率表值: {0}" />
+		<Item Name="MSG_96" Value="功率表状态: 未配置" />
+		<Item Name="MSG_97" Value="获取功率表成功." />
+		<Item Name="MSG_98" Value="确定要重置功率表?" />
+		<Item Name="MSG_99" Value="重置功率表成功." />
+		<Item Name="MSG_100" Value="确定要导出记录?" />
+		<Item Name="MSG_101" Value="导出记录成功." />
+		<Item Name="MSG_102" Value="导出记录失败!" />
+		<Item Name="MSG_103" Value="确定要删除库里所有的记录?" />
+		<Item Name="MSG_104" Value="删除了所有的记录." />
+		<Item Name="MSG_105" Value="删除所有记录失败!" />
+		<Item Name="MSG_106" Value="{0}dBm,设置功率失败!" />
+		<Item Name="MSG_107" Value="{0}dBm,写入失败!" />
+		<Item Name="MSG_108" Value="{0}dBm,写入成功!" />
+		<Item Name="MSG_109" Value="{0}dBm,读出失败!" />
+		<Item Name="MSG_110" Value="{0}dBm,读出成功!" />
+		<Item Name="MSG_111" Value="第{0}次,写入失败!" />
+		<Item Name="MSG_112" Value="第{0}次,写入成功!" />
+		<Item Name="MSG_113" Value="第{0}次,读出失败!" />
+		<Item Name="MSG_114" Value="第{0}次,读出成功!" />
+		<Item Name="MSG_115" Value="第{0}次,写入:{1}次,读出{2}次." />
+		<Item Name="MSG_116" Value="第{0}次,读写数据不一致!" />
+		<Item Name="MSG_117" Value="完成!写/读:{0}次/{1}次,成功率{2}%." />
+    <Item Name="MSG_118" Value="数据长度: {0}字节." />
+    <Item Name="MSG_119" Value="确定要删除记录?" />
+    <Item Name="MSG_120" Value="删除了记录." />
+    <Item Name="MSG_121" Value="删除了记录失败!" />
+    <Item Name="MSG_122" Value="块写入的数据长度需是块长度的倍数." />
+    <Item Name="MSG_123" Value="RFID模块无法工作." />
+    <Item Name="MSG_124" Value="当前通讯速率: {0}" />
+    <Item Name="MSG_125" Value="设置通讯速率: {0}." />
+    <Item Name="MSG_126" Value="{0},设置通讯速率失败!" />
+    <Item Name="MSG_127" Value="请输入要查找的数据!" />
+    <Item Name="MSG_128" Value="输入数据长度不正确!" />
+    <Item Name="MSG_129" Value="正在查找标签" />
+    <Item Name="MSG_130" Value="查找标签失败,{0}!" />
+    <Item Name="MSG_131" Value="配置EAS比特位失败,{0}!" />
+    <Item Name="MSG_132" Value="取消EAS比特位失败,{0}!" />
+    <Item Name="MSG_133" Value="配置EAS比特位成功!" />
+    <Item Name="MSG_134" Value="取消EAS比特位成功!" />
+    <Item Name="MSG_135" Value="设置标签读取保护失败,{0}!" />
+    <Item Name="MSG_136" Value="取消标签读取保护失败,{0}!" />
+    <Item Name="MSG_137" Value="设置标签读取保护成功!" />
+    <Item Name="MSG_138" Value="取消标签读取保护成功!" />
+    <Item Name="MSG_139" Value="标签数据不能为空!" />
+    <Item Name="MSG_140" Value="正在EAS监控!" />
+    <Item Name="MSG_141" Value="已停止EAS监控!" />
+    <Item Name="MSG_142" Value="EAS监控启动成功!" />
+    <Item Name="MSG_143" Value="EAS监控启动失败!" />
+    <Item Name="MSG_144" Value="设置失败,读取时间不能小于10(s)!" />
+    <Item Name="MSG_145" Value="设置失败,读取时间不能大于300(s)!" />
+  </Message>
+</language>

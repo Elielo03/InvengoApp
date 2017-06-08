@@ -373,6 +373,7 @@ namespace Invengo.Sample
 
         private void btClear_Click_1(object sender, EventArgs e)
         {
+            lblStat.Text = "";
             lvCodes.Items.Clear();
             totalTimes = 0;
             totalTags = 0;
@@ -452,7 +453,8 @@ namespace Invengo.Sample
 
         private void btRead_Click(object sender, EventArgs e)
         {
-            lblStat.Text = "";
+            
+
             IsKeyUp = !IsKeyUp;
             ReadLoop();
         }

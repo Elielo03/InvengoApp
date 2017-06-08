@@ -1,0 +1,334 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{78F0C9C2-7DCC-43C6-8C23-16FFEB9DD89B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Invengo.Sample</RootNamespace>
+    <AssemblyName>Invengo.Sample</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.0</OSVersion>
+    <DeployDirSuffix>Invengo.Demo.UHF</DeployDirSuffix>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FormFactorID>
+    </FormFactorID>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <NativePlatformName>Windows CE</NativePlatformName>
+    <StartupObject>
+    </StartupObject>
+    <DeployDirPrefix>%25CSIDL_PERSONAL%25</DeployDirPrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CodeBetter.Json, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\JsonReference\CodeBetter.JsonCF_v0.2_Binaries\CodeBetter.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Communication, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\手持机API\20131125\API\Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="Invengo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\API\API1.1_20130425\API\Invengo.dll</HintPath>
+    </Reference>
+    <Reference Include="Invengo.Barcode, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Invengo.Barcode.dll</HintPath>
+    </Reference>
+    <Reference Include="Invengo.Devices.ModuleControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\API\API1.1(20130121)\API\Invengo.Devices.ModuleControl.dll</HintPath>
+    </Reference>
+    <Reference Include="IRP1, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\手持机API\20131125\API\IRP1.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqBridge, Version=1.3.0.0, Culture=neutral, PublicKeyToken=c2b14eb747628076, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\LinqBridge.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="RFIDInterface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\手持机API\20131125\API\RFIDInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=1fdb50b1b62b4c84, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\sqlLite\bin\CompactFramework\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyVersion.cs" />
+    <Compile Include="Conexion.cs" />
+    <Compile Include="FrScanTagComedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrScanTagComedor.Designer.cs">
+      <DependentUpon>FrScanTagComedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dao\Dao.cs" />
+    <Compile Include="FormatConvert.cs" />
+    <Compile Include="FrBarcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrBarcode.Designer.cs">
+      <DependentUpon>FrBarcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrAntennaPower.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrAntennaPower.Designer.cs">
+      <DependentUpon>FrAntennaPower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrBattery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrBattery.Designer.cs">
+      <DependentUpon>FrBattery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrConexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrConexion.Designer.cs">
+      <DependentUpon>FrConexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrInfo.Designer.cs">
+      <DependentUpon>FrInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrLengthParas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrLengthParas.Designer.cs">
+      <DependentUpon>FrLengthParas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrMenu.Designer.cs">
+      <DependentUpon>FrMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrMotoBarCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrMotoBarCode.designer.cs">
+      <DependentUpon>FrMotoBarCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrPadMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrPadMain.Designer.cs">
+      <DependentUpon>FrPadMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrReadSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrReadSettings.Designer.cs">
+      <DependentUpon>FrReadSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrScanTag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrScanTag.Designer.cs">
+      <DependentUpon>FrScanTag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrSysInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrSysInfo.Designer.cs">
+      <DependentUpon>FrSysInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrTagMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrTagMain.Designer.cs">
+      <DependentUpon>FrTagMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrTestKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrTestKey.Designer.cs">
+      <DependentUpon>FrTestKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrScreen.Designer.cs">
+      <DependentUpon>FrScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrWriteTag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrWriteTag.Designer.cs">
+      <DependentUpon>FrWriteTag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\Config.cs" />
+    <Compile Include="Lib\GPRSControl.cs" />
+    <Compile Include="Lib\UiReadSound.cs" />
+    <Compile Include="Persona.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrBarcode.resx">
+      <DependentUpon>FrBarcode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrAntennaPower.resx">
+      <DependentUpon>FrAntennaPower.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrBattery.resx">
+      <DependentUpon>FrBattery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrConexion.resx">
+      <DependentUpon>FrConexion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrInfo.resx">
+      <DependentUpon>FrInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrLengthParas.resx">
+      <DependentUpon>FrLengthParas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrMenu.resx">
+      <DependentUpon>FrMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrMotoBarCode.resx">
+      <DependentUpon>FrMotoBarCode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrPadMain.resx">
+      <DependentUpon>FrPadMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrReadSettings.resx">
+      <DependentUpon>FrReadSettings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrScanTag.resx">
+      <DependentUpon>FrScanTag.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrScanTagComedor.resx">
+      <DependentUpon>FrScanTagComedor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrSysInfo.resx">
+      <DependentUpon>FrSysInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrTagMain.resx">
+      <DependentUpon>FrTagMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrTestKey.resx">
+      <DependentUpon>FrTestKey.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrScreen.resx">
+      <DependentUpon>FrScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrWriteTag.resx">
+      <DependentUpon>FrWriteTag.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrSound.resx">
+      <DependentUpon>FrSound.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Lib\ReadTagBll.cs" />
+    <Compile Include="FrSound.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrSound.Designer.cs">
+      <DependentUpon>FrSound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\TagOperation.cs" />
+    <Compile Include="RestClient.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SQLite.Interop.066.DLL">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SQLite.Interop.066.exp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQLite.Interop.066.lib">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.v1.targets" />
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v2.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v3.5'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+</Project>

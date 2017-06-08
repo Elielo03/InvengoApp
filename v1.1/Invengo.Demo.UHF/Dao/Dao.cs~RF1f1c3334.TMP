@@ -1,0 +1,123 @@
+﻿using System;
+
+using System.Collections.Generic;
+using System.Text;
+using System.Data.SQLite;
+
+
+namespace Invengo.Sample.Dao
+{
+
+    class Dao
+    {
+        SQLiteConnection con;
+        public Dao()
+        {
+            Conexion conexion = new Conexion();
+            con = conexion.conectar();
+        }
+
+        public Boolean addMarcaje(int idPersona, string dia, string mes, string year, string hora)
+        {
+            Boolean respuesta = false;
+            string sql = "INSERT INTO marcaje (idPersona,dia,mes,year,hora) values(?,?,?,?,?)";
+            SQLiteCommand cmd = new SQLiteCommand(sql, con);
+            cmd.Parameters.Add(idPersona);
+            cmd.Parameters.Add(dia);
+            cmd.Parameters.Add(mes);
+            cmd.Parameters.Add(year);
+            cmd.Parameters.Add(hora);
+            try
+            {
+                cmd.ExecuteNonQuery();
+                respuesta = true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+
+            }
+
+            return respuesta;
+        }
+
+        public Boolean personaExist(string noCtrl)
+        {
+            Boolean respuesta = false;
+            string sql = "SELECT * FROM 'persona' where noControl='"+noCtrl+"'";
+            SQLiteCommand cmd = new SQLiteCommand(sql, con);
+            //cmd.Parameters.Add(noCtrl);
+            try
+            {
+
+                SQLiteDataReader rdr = cmd.ExecuteReader();
+                try
+                {
+                    if (rdr.HasRows)
+                    {
+                        respuesta = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    Console.WriteLine(ex.Message);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+
+            }
+
+            return respuesta;
+        }
+
+
+
+        public String getPersonaByCtrl(string ctrl)
+        {
+            char[] MyChar = { ' ' };
+            string noCtrol = ctrl.TrimStart(MyChar);
+            Console.WriteLine("Numero de control: " + noCtrol);
+            string respuesta = "";
+            string sql = "SELECT * FROM 'persona' where noControl="+"'E20034120182FE00'";
+           
+            SQLiteCommand cmd = new SQLiteCommand(sql, con);
+            //cmd.Parameters.Add(noCtrl);
+            try
+            {
+
+                SQLiteDataReader rdr = cmd.ExecuteReader();
+                try
+                {
+                    Console.WriteLine(sql);
+                    Console.WriteLine("la lectura es: " + rdr.Read());
+                    while (rdr.Read())
+                    {
+                        Console.WriteLine(rdr[1]);
+                        respuesta += rdr[0].ToString() + " " + rdr[1].ToString() + " " + rdr[2].ToString() + " " + rdr[3].ToString() + " " + rdr[4].ToString();
+                    }
+                    Console.WriteLine(respuesta);
+                    }
+                catch (Exception ex)
+                {
+
+                    Console.WriteLine(ex.Message);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+
+            }
+
+            return respuesta;
+        }
+
+    }
+}

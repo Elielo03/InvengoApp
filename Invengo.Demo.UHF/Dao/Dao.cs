@@ -16,21 +16,8 @@ namespace Invengo.Sample.Dao
         {
             Conexion conexion = new Conexion();
             con = conexion.conectar();
-            //hola danny
            
         }
-
-        
-
-
-
-        public Boolean addFoto(string id_persona, string foto2) {
-
-           
-            return false;
-
-        }
-
 
         public Boolean addMarcaje(int idPersona,int idEmpresa, string Empresa, string numNomina, string credencial, int esFamiliar)
         {
@@ -124,10 +111,11 @@ namespace Invengo.Sample.Dao
             return respuesta;
         }
 
-        public Boolean addPersona(string idPersona, string nombreCompleto,string Credencial,string numNomina,string habilitado, string id_empresa,string Empresa,string UHF,string idCredencial, string comedor) {
+        public Boolean addPersona(string idPersona, string numNomina, string NumControl, string nombreCompleto, string habilitado, string id_empresa, string Empresa, string comedor, string UHF, string idCredencial,string TipoPersona)
+        {
 
-            string query = "INSERT INTO persona(idPersona,nombreCompleto,Credencial,numNomina,habilitado,id_empresa,Empresa,UHF,idCredencial,comedor)"+
-            " values(" + idPersona + ",'" + nombreCompleto + "'," + Credencial + "," + numNomina + "," + habilitado + "," + id_empresa + ",'" + Empresa + "','"+UHF +"','"+idCredencial +"',"+comedor + ")";
+            string query = "INSERT INTO persona(idPersona,numNomina,NumControl,nombreCompleto,habilitado,id_empresa,Empresa,UHF,idCredencial,comedor,TipoPersona)" +
+            " values(" + idPersona + ",'" + nombreCompleto + "'," + NumControl + "," + numNomina + "," + habilitado + "," + id_empresa + ",'" + Empresa + "','"+UHF +"','"+idCredencial +"',"+comedor + ",'"+TipoPersona+"')";
             string conString = @"Data Source=\datoInvengo.s3db";
             Boolean respuesta = false;
             SQLiteConnection con = new SQLiteConnection(conString);
@@ -231,7 +219,7 @@ namespace Invengo.Sample.Dao
 
             string noControl = ctrl;
             noControl = noControl.Replace(" ", "");
-            string query = "SELECT * FROM persona where credencial='" + noControl + "'";
+            string query = "SELECT * FROM persona where NumControl='" + noControl + "'";
             
             string conString = @"Data Source=\datoInvengo.s3db";
             string respuesta=null;
@@ -258,12 +246,12 @@ namespace Invengo.Sample.Dao
                             idPersona = int.Parse(rdr[0].ToString());
                             idEmpresa = int.Parse(rdr[5].ToString());
                             Empresa = rdr[6].ToString();
-                            numNomina=rdr[3].ToString();
-                            credencial = rdr[2].ToString();
-                            esFamiliar=int.Parse(rdr[7].ToString());
+                            numNomina = rdr[1].ToString();
+                            credencial = rdr[2].ToString();//este es NumControl
+                            esFamiliar = int.Parse(rdr[10].ToString());
                             
                           
-                            respuesta = rdr[0]+","+rdr[1].ToString()+","+credencial+","+Empresa;
+                            respuesta = rdr[0]+","+rdr[3].ToString()+","+credencial+","+Empresa;
                             //controla si se realizara la insercion al final de metodo o no
                             insertar = true;
                             
@@ -326,12 +314,12 @@ namespace Invengo.Sample.Dao
                         idPersona = int.Parse(rdr[0].ToString());
                         idEmpresa = int.Parse(rdr[5].ToString());
                         Empresa = rdr[6].ToString();
-                        numNomina = rdr[3].ToString();
-                        credencial = rdr[2].ToString();
-                        esFamiliar = int.Parse(rdr[7].ToString());
+                        numNomina = rdr[1].ToString();
+                        credencial = rdr[2].ToString();//este es NumControl
+                        esFamiliar = int.Parse(rdr[10].ToString());
 
                        
-                        respuesta = rdr[0] + "," + rdr[1].ToString() + "," + credencial + "," + Empresa;
+                        respuesta = rdr[0] + "," + rdr[3].ToString() + "," + credencial + "," + Empresa;
                         //controla si se realizara la insercion al final de metodo o no
                        
                         insertar = true;
@@ -395,10 +383,10 @@ namespace Invengo.Sample.Dao
                         idPersona = int.Parse(rdr[0].ToString());
                         idEmpresa = int.Parse(rdr[5].ToString());
                         Empresa = rdr[6].ToString();
-                        numNomina = rdr[3].ToString();
-                        credencial = rdr[2].ToString();
-                        esFamiliar = int.Parse(rdr[7].ToString());                       
-                        respuesta = rdr[0] + "," + rdr[1].ToString() + "," + credencial + "," + Empresa;
+                        numNomina = rdr[1].ToString();
+                        credencial = rdr[2].ToString();//este es NumControl
+                        esFamiliar = int.Parse(rdr[10].ToString());                       
+                        respuesta = rdr[0] + "," + rdr[3].ToString() + "," + credencial + "," + Empresa;
                         insertar = true;
                     }
                 }
@@ -434,7 +422,7 @@ namespace Invengo.Sample.Dao
 
             string noControl = ctrl;
             noControl = noControl.Replace(" ", "");
-            string query = "SELECT * FROM persona where Credencial='" + noControl + "'";
+            string query = "SELECT * FROM persona where NumControl='" + noControl + "'";
             string conString = @"Data Source=\datoInvengo.s3db";
             string respuesta = null;
             SQLiteConnection con = new SQLiteConnection(conString);
@@ -457,10 +445,10 @@ namespace Invengo.Sample.Dao
                         idPersona = int.Parse(rdr[0].ToString());
                         idEmpresa = int.Parse(rdr[5].ToString());
                         Empresa = rdr[6].ToString();
-                        numNomina = rdr[3].ToString();
-                        credencial = rdr[2].ToString();
-                        esFamiliar = int.Parse(rdr[7].ToString());
-                        respuesta = rdr[0] + "," + rdr[1].ToString() + "," + credencial + "," + Empresa;
+                        numNomina = rdr[1].ToString();
+                        credencial = rdr[2].ToString();//este es NumControl
+                        esFamiliar = int.Parse(rdr[10].ToString());
+                        respuesta = rdr[0] + "," + rdr[3].ToString() + "," + credencial + "," + Empresa;
                         //controla si se realizara la insercion al final de metodo o no
                         insertar = true;
 
